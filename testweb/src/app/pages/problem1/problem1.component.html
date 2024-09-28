@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+
+<app-navbar></app-navbar>
+<div class="flex space-x-4">
+    <div class="w-1/2  bg-white px-4 py-2 shadow rounded">
+        <h1 class="text-3xl font-bold ">Problem 1: Chess</h1>
+        <p>A queen is standing on an n x n chessboard. The chess board's rows are numbered from 1 to n, going from bottom to top. Its columns are numbered from 1 to n, going from left to right. Each square is referenced by a tuple, (r, c) , describing the row, r, and column, c, where the square is located.</p>
+        <p>The queen is standing at position (rq, cq).</p>
+        <p>There are obstacles on the chessboard, each preventing the queen from attacking any square beyond the obstacle, on a given path.</p>
+        <p>Given the queen's position and the locations of all the obstacles, find and print the number of squares the queen can attack from her position at (rq, cq).</p>
+        <h2 class="text-2xl font-bold">Sample Input </h2>
+        <p>
+            5 3<br> 
+            4 3<br> 
+            5 5<br> 
+            4 2<br> 
+            2 3<br> 
+        </p>
+        <p>The first line contains two space-separated integers n and k, the length of the board's sides and the number of obstacles<br>
+            The next line contains two space-separated integers rq and cq, the queen's row and column position.<br>
+            Each of the next k lines contains two space-separated integers r[i] and c[i], the row and column position of obstacles[i].
+        </p>
+        <p>You can see the representation of this sample input in the diagram Example 1 on the right side.</p>
+        
+    </div>
+
+    <div class="flex flex-col justify-center items-center w-1/2 bg-white p-4 shadow rounded">
+        <h2 class="text-lg font-semibold mb-2">Example 1: The queen is standing at position (4, 3) on a 5x5 chessboard with k = 3 obstacles</h2>
+        <img src="../../../assets/image1.jpeg" alt="Descripción de la imagen" class="h-96 w-96 rounded ">
+        <p>The result of this input will be 10.</p>
+    </div>
+</div>
+
+<div class="flex mt-4 space-x-4">
+    <div class="w-1/2 bg-white p-4 shadow rounded">
+        <app-inputs id="input_1" (sendDataEvent)="handleData($event)"></app-inputs>
+    </div>
+    <div class="w-1/2 bg-white p-4 shadow rounded">
+        <app-outputs [responseData]="result"></app-outputs>
+    </div>
+</div>
+<app-footer></app-footer>

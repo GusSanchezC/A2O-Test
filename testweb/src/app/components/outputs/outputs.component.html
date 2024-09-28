@@ -1,0 +1,13 @@
+<h3 class="text-lg font-semibold mb-2">Result:</h3>
+<div class="border p-2 h-40 border-gray-300 rounded">
+        @if (responseData) {
+                <pre>
+                        {{responseData | json}}
+                </pre>
+        }@else {
+                <pre>
+                        The result will be shown here
+                </pre>
+        }
+        
+</div>
