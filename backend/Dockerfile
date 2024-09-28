@@ -1,10 +1,10 @@
 FROM python:3.11
 # Establece el directorio de trabajo
-WORKDIR /app
-COPY requirements.txt /app/
+WORKDIR /backend
+COPY requirements.txt /backend/
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
+COPY . /backend
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
