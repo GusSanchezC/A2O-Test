@@ -12,8 +12,8 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./testweb
     ports:
       - "80:80"
     volumes:
-      - ./frontend:/app
+      - ./testweb:/app
